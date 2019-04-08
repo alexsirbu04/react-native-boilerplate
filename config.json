@@ -1,0 +1,5 @@
+{
+    "backend": {
+        "root": "https://<access-point-here>"
+    }
+}

@@ -1,0 +1,14 @@
+{
+	"semi": true,
+	"singleQuote": true,
+	"parser": "typescript",
+	"tabWidth": 4,
+	"printWidth": 100,
+	"useTabs": true,
+	"overrides": [
+		{
+			"files": [".prettierrc", "app.json", "tsconfig.json", "tslint.json", "package.json"],
+			"options": { "parser": "json" }
+		}
+	]
+}

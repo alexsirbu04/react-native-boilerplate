@@ -1,0 +1,61 @@
+{
+	"name": "boddly",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"reinstall": "rm -rf node_modules/ && yarn install && cd ios && rm -rf Pods && pod install && cd ..",
+		"reset:android": "cd android/ && ./gradlew clean && cd ../../../",
+		"reset:rn": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/metro-cache-* && rm -fr /tmp/react-* && rm -rf /tmp/haste-map-react-native-packager-* && rm -rf /tmp/haste-map-metro-*",
+		"reset:yarn": "yarn cache clean",
+		"reset:modules": "rm -rf node_modules/ yarn.lock node_modules",
+		"reset": "npm-run-all reset:*",
+		"run:android": "react-native run-android",
+		"run:ios": "react-native run-ios",
+		"start:js": "react-native start"
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"react": "16.8.3",
+		"react-native": "0.59.3",
+		"react-native-gesture-handler": "^1.1.0",
+		"react-native-orientation": "^3.1.3",
+		"react-navigation": "^3.6.1",
+		"react-redux": "^6.0.1",
+		"redux": "^4.0.1",
+		"redux-devtools-extension": "^2.13.8",
+		"redux-persist": "^5.10.0",
+		"redux-thunk": "^2.3.0",
+		"reselect": "^4.0.0",
+		"uuid": "^3.3.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.4.3",
+		"@babel/runtime": "^7.4.3",
+		"@types/jest": "^24.0.11",
+		"@types/react": "^16.8.13",
+		"@types/react-native": "^0.57.42",
+		"@types/react-native-orientation": "^5.0.1",
+		"@types/react-navigation": "^3.0.6",
+		"@types/react-redux": "^7.0.6",
+		"@types/react-test-renderer": "^16.8.1",
+		"@types/uuid": "^3.4.4",
+		"babel-jest": "^24.7.1",
+		"jest": "^24.7.1",
+		"metro-react-native-babel-preset": "^0.53.1",
+		"npm-run-all": "^4.1.5",
+		"prettier": "^1.16.4",
+		"react-test-renderer": "16.8.3",
+		"tslint": "^5.15.0",
+		"tslint-config-prettier": "^1.18.0",
+		"tslint-eslint-rules": "^5.4.0",
+		"tslint-immutable": "^5.5.2",
+		"tslint-plugin-prettier": "^2.0.1",
+		"tslint-react": "^4.0.0",
+		"typescript": "^3.4.2"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
