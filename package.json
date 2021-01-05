@@ -16,7 +16,7 @@
 		"start:js": "react-native start"
 	},
 	"dependencies": {
-		"axios": "^0.18.1",
+		"axios": "^0.21.1",
 		"react": "16.8.3",
 		"react-native": "0.59.3",
 		"react-native-gesture-handler": "^1.1.0",
